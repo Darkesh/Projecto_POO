@@ -66,15 +66,4 @@
     </state>
     <state x="375" y="160" key="new project wizard/65.0.1855.1080/1920.0.1858.1080@65.0.1855.1080" timestamp="1606837182735" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/poo/src/ImagemACores.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>
