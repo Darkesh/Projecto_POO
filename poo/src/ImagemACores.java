@@ -5,7 +5,7 @@
  * - O tamanho das linhas da matriz corresponde à largura da imagem (dados[*].length) – onde * deverá ser um valor entre 0 e dados.length
  * - A cor do pixel está codificada como um inteiro (ARGB)
  */
-class ImagemACores {
+class ImagemACores{
 
     private int[][] dados; // @aImagemACores
 
