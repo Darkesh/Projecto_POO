@@ -1,3 +1,5 @@
+package com.piaget;
+
 /**
  * Representa uma cor RGB.
  * Os valores RGB são guardados num array com 3 posições:

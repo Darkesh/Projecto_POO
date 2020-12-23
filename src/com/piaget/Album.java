@@ -1,3 +1,5 @@
+package com.piaget;
+
 import java.util.List;
 
 public class Album {
