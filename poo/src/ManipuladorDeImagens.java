@@ -60,9 +60,46 @@ public class ManipuladorDeImagens {
     }
 
     public static ImagemACores aumentaImagem(ImagemACores imagemAAumentar) {
+
+        int larguraDaImagemAAlterar = imagemAAumentar.obterLargura();
+        int alturaDaImagemAAlterar = imagemAAumentar.obterAltura();
+
         ImagemACores imagemMaior = new ImagemACores(0, 0);
 
         // aumentar a imagem (imagemAAumentar)
+        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar; xQuadradoFora+=escala) {
+            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar; yQuadradoFora+=escala) {
+
+                int acumulaR = 0;
+                int acumulaG = 0;
+                int acumulaB = 0;
+
+                for(int xQuadradoDentro = xQuadradoFora; xQuadradoDentro < xQuadradoFora + escala ; xQuadradoDentro++) {
+                    for(int yQuadradoDentro = yQuadradoFora; yQuadradoDentro < yQuadradoFora + escala ; yQuadradoDentro++) {
+                        Cor corDoPixel = imagemAAumentar.obterCor(xQuadradoDentro, yQuadradoDentro);
+
+                        int r = corDoPixel.obterR();
+                        int g = corDoPixel.obterG();
+                        int b = corDoPixel.obterB();
+
+                        acumulaR += r;
+                        acumulaG += g;
+                        acumulaB += b;
+
+                        int mediaR = acumulaR / ((int)Math.pow(escala, 2));
+                        int mediaG = acumulaG / ((int)Math.pow(escala, 2));
+                        int mediaB = acumulaB / ((int)Math.pow(escala, 2));
+
+                        Cor corNova = new Cor(mediaR, mediaG, mediaB);
+
+                        imagemMaior.mudaCor(xQuadradoFora/escala, yQuadradoFora/escala, corNova);
+                    }
+                }
+            }
+        }
+
+        // Isto não é suposto ficar aqui, é só para testes!
+        //imagemMaior.escreverParaDisco("C:\\Users\\joaos\\IdeaProjects\\ProjectoPO\\imagens\\bugsbunny_reduz.png", "png");
 
         return imagemMaior;
     }
