@@ -1,23 +1,5 @@
-public class ImagemComEtiqueta {
-
-    private String nome;
-    private float largura;
-    private float altura;
-
-    private void obterNome() {
-
+public class ImagemComEtiqueta extends ImagemACores {
+    ImagemComEtiqueta(String ficheiro) {
+        super(ficheiro);
     }
-
-    private void mudarNome() {
-
-    }
-
-    private void obterLargura() {
-
-    }
-
-    private void obterAltura() {
-
-    }
-
 }

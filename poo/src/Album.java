@@ -1,39 +1,10 @@
+import java.util.List;
+
 public class Album {
+    List<ImagemComEtiqueta> asMinhasImagens;
+    ManipuladorDeImagens manipuladorDeImagens;
 
-    private void adicionarImg() {
+    ImagemComEtiqueta imagem1 = new ImagemComEtiqueta("donald_trump.jpg");
 
-    }
-
-    private void imgExibicao() {
-
-    }
-
-    private void imgMetadeAnt() {
-
-    }
-
-    private void imgMetadeSeg() {
-
-    }
-
-    private void mudarImgSeg() {
-
-    }
-
-    private void mudarImgAnt() {
-
-    }
-
-    private void ampliarImg() {
-
-    }
-
-    private void blurImg() {
-
-    }
-
-    private void mostrarAlbum() {
-
-    }
-
+    ImagemComEtiqueta imagem1reduzida = (ImagemComEtiqueta) ManipuladorDeImagens.reduzImagem(imagem1, 2);
 }

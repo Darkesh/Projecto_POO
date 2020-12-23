@@ -5,7 +5,7 @@
  * - O tamanho das linhas da matriz corresponde à largura da imagem (dados[*].length) – onde * deverá ser um valor entre 0 e dados.length
  * - A cor do pixel está codificada como um inteiro (ARGB)
  */
-class ImagemACores{
+class ImagemACores {
 
     private int[][] dados; // @aImagemACores
 
@@ -25,6 +25,8 @@ class ImagemACores{
         return dados.length;
     }
 
+    int[][] obterDados() { return dados; }
+
     void mudaCor(int x, int y, Cor c) {
         dados[y][x] = ImageUtil.encodeRgb(c.obterR(), c.obterG(), c.obterB());
     }
@@ -32,5 +34,9 @@ class ImagemACores{
     Cor obterCor(int x, int y) {
         int[] rgb = ImageUtil.decodeRgb(dados[y][x]);
         return new Cor(rgb[0], rgb[1], rgb[2]);
+    }
+
+    void escreverParaDisco(String caminho, String formato) {
+        ImageUtil.writeImage(this.dados, caminho, formato);
     }
 }
