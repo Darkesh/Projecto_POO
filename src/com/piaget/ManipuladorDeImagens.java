@@ -56,7 +56,7 @@ public class ManipuladorDeImagens {
         }
 
         // Isto não é suposto ficar aqui, é só para testes!
-        imagemNova.escreverParaDisco("C:\\Users\\Joao Espada\\Desktop\\Trabalhos\\CTeSP\\2º Ano\\PO\\Exercicios\\ProjetoPOO\\imagens\\bugsbunny_reduz.png", "png");
+        imagemNova.escreverParaDisco("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny_reduz.png", "png");
 
         return imagemNova;
     }
@@ -66,18 +66,17 @@ public class ManipuladorDeImagens {
         int larguraDaImagemAAlterar = imagemAAumentar.obterLargura();
         int alturaDaImagemAAlterar = imagemAAumentar.obterAltura();
 
-        ImagemACores imagemMaior = new ImagemACores(0, 0);
+        ImagemACores imagemMaior = new ImagemACores(larguraDaImagemAAlterar*3, alturaDaImagemAAlterar*3);
 
-        // aumentar a imagem (imagemAAumentar)
-        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar; xQuadradoFora++) {
-            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar; yQuadradoFora++) {
+        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar; xQuadradoFora+=3) {
+            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar; yQuadradoFora+=3) {
 
                 int acumulaR = 0;
                 int acumulaG = 0;
                 int acumulaB = 0;
 
-                for(int xQuadradoDentro = xQuadradoFora; xQuadradoDentro < xQuadradoFora; xQuadradoDentro++) {
-                    for(int yQuadradoDentro = yQuadradoFora; yQuadradoDentro < yQuadradoFora; yQuadradoDentro++) {
+                for(int xQuadradoDentro = xQuadradoFora; xQuadradoDentro < xQuadradoFora+3; xQuadradoDentro++) {
+                    for(int yQuadradoDentro = yQuadradoFora; yQuadradoDentro < yQuadradoFora+3; yQuadradoDentro++) {
                         Cor corDoPixel = imagemAAumentar.obterCor(xQuadradoDentro, yQuadradoDentro);
 
                         int r = corDoPixel.obterR();
@@ -88,20 +87,20 @@ public class ManipuladorDeImagens {
                         acumulaG += g;
                         acumulaB += b;
 
-                        int mediaR = acumulaR * 3;
-                        int mediaG = acumulaG * 3;
-                        int mediaB = acumulaB * 3;
+                        int mediaR = acumulaR / ((int)Math.pow(3, 2));
+                        int mediaG = acumulaG / ((int)Math.pow(3, 2));
+                        int mediaB = acumulaB / ((int)Math.pow(3, 2));
 
                         Cor corNova = new Cor(mediaR, mediaG, mediaB);
 
-                        imagemMaior.mudaCor(xQuadradoFora, yQuadradoFora, corNova);
+                        imagemMaior.mudaCor(xQuadradoFora*3, yQuadradoFora*3, corNova);
                     }
                 }
             }
         }
 
         // Isto não é suposto ficar aqui, é só para testes!
-        imagemMaior.escreverParaDisco("C:\\Users\\Joao Espada\\Desktop\\Trabalhos\\CTeSP\\2º Ano\\PO\\Exercicios\\ProjetoPOO\\imagens\\jerry_aumenta.png", "png");
+        imagemMaior.escreverParaDisco("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry_aumenta.png", "png");
 
         return imagemMaior;
     }
@@ -143,7 +142,7 @@ public class ManipuladorDeImagens {
             }
         }
 
-        imagemNova.escreverParaDisco("C:\\Users\\Joao Espada\\Desktop\\Trabalhos\\CTeSP\\2º Ano\\PO\\Exercicios\\ProjetoPOO\\imagens\\bugsbunny_pixel.png", "png");
+        imagemNova.escreverParaDisco("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny_pixel.png", "png");
 
         return imagemNova;
     }
