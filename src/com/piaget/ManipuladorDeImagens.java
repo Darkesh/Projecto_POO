@@ -9,10 +9,6 @@ public class ManipuladorDeImagens {
         int larguraDaImagemAAlterar = imagemAAlterar.obterLargura();
         int alturaDaImagemAAlterar = imagemAAlterar.obterAltura();
 
-        // O que é que acontece se a escala for ímpar?
-        // O que é que acontece se a imagem não for quadrada?
-        // O que é que acontece, se as dimensões da imagem destino não baterem certo com a escala?
-
         ImagemACores imagemNova = new ImagemACores(larguraDaImagemAAlterar/escala, alturaDaImagemAAlterar/escala);
 
         // Imagem 4x4
@@ -24,8 +20,8 @@ public class ManipuladorDeImagens {
 
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
-        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar; xQuadradoFora+=escala) {
-            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar; yQuadradoFora+=escala) {
+        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar - escala; xQuadradoFora+=escala) {
+            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar - escala; yQuadradoFora+=escala) {
 
                 int acumulaR = 0;
                 int acumulaG = 0;
@@ -55,7 +51,6 @@ public class ManipuladorDeImagens {
             }
         }
 
-        // Isto não é suposto ficar aqui, é só para testes!
         imagemNova.escreverParaDisco("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny_reduz.png", "png");
 
         return imagemNova;
@@ -68,8 +63,8 @@ public class ManipuladorDeImagens {
 
         ImagemACores imagemMaior = new ImagemACores(larguraDaImagemAAlterar*3, alturaDaImagemAAlterar*3);
 
-        for(int xQuadradoDentro = 1; xQuadradoDentro < larguraDaImagemAAlterar - 1; xQuadradoDentro += 1) {
-            for(int yQuadradoDentro = 1; yQuadradoDentro < alturaDaImagemAAlterar - 1; yQuadradoDentro += 1) {
+        for(int xQuadradoDentro = 1; xQuadradoDentro < larguraDaImagemAAlterar - 1; xQuadradoDentro ++) {
+            for(int yQuadradoDentro = 1; yQuadradoDentro < alturaDaImagemAAlterar - 1; yQuadradoDentro ++) {
 
                 int acumulaR = 0;
                 int acumulaG = 0;
@@ -105,7 +100,6 @@ public class ManipuladorDeImagens {
             }
         }
 
-        // Isto não é suposto ficar aqui, é só para testes!
         imagemMaior.escreverParaDisco("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry_aumenta.png", "png");
 
         return imagemMaior;
