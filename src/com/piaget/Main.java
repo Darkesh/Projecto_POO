@@ -7,14 +7,39 @@ public class Main {
 
         ManipuladorDeImagens manipuladorDeImagens;
 
-        ImagemACores tomEJerry = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerrypng.png");
-        ImagemACores bugsBunny = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsBunny.png");
-        ImagemACores Jerry = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry.png");
+        // Manipulador Imagens testes
 
-        ImagemACores tomEJerryReduzido = ManipuladorDeImagens.reduzImagem(tomEJerry, 2);
-        ImagemACores bugsBunnyReduzido = ManipuladorDeImagens.reduzImagem(bugsBunny, 5);
+        //ImagemACores tomEJerry = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerrypng.png");
+        //ImagemACores bugsBunny = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsBunny.png");
+        //ImagemACores Jerry = new ImagemACores("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry.png");
+
+        //ImagemACores tomEJerryReduzido = ManipuladorDeImagens.reduzImagem(tomEJerry, 2);
+        //ImagemACores bugsBunnyReduzido = ManipuladorDeImagens.reduzImagem(bugsBunny, 5);
         //ImagemACores bugsBunnyPixel = ManipuladorDeImagens.pixelizaImagem(bugsBunny, 3);
-        ImagemACores tomEJerryPixel = ManipuladorDeImagens.pixelizaImagem(tomEJerry, 2);
-        ImagemACores JerryAumentado = ManipuladorDeImagens.aumentaImagem(Jerry);
+        //ImagemACores tomEJerryPixel = ManipuladorDeImagens.pixelizaImagem(tomEJerry, 2);
+        //ImagemACores JerryAumentado = ManipuladorDeImagens.aumentaImagem(Jerry);
+
+        // ImagemComEtiqueta testes
+
+        ImagemComEtiqueta imagemEtiqueta = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry.png", "rato");
+        ImagemComEtiqueta imagemEtiqueta2 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerrypng.png", "gato e rato");
+        ImagemComEtiqueta imagemEtiqueta3 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny.png", "coelho");
+        //imagemEtiqueta.mostrarDados(imagemEtiqueta);
+
+        Album album = new Album();
+
+        album.adicionaImagem(imagemEtiqueta);
+        //album.mostrarDados(imagemEtiqueta);
+        album.adicionaImagem(imagemEtiqueta2);
+        //album.mostrarDados(imagemEtiqueta2);
+        album.adicionaImagem(imagemEtiqueta3);
+        //album.pixelizarImagemExibicao();
+        album.imagemExibicao();
+        album.imagemSeguinte();
+        System.out.println("-------------------------------------------------");
+        album.imagemExibicao();
+        album.imagemSeguinte();
+        System.out.println("-------------------------------------------------");
+        album.imagemExibicao();
     }
 }

@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8d768aa8-d2e8-4dad-826b-6b09d4db170a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/bugsbunny_pixel.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagens/bugsbunny_pixel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/bugsbunny_reduz.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagens/bugsbunny_reduz.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/piaget/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/piaget/ImagemComEtiqueta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/ImagemComEtiqueta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/piaget/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/piaget/ManipuladorDeImagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/ManipuladorDeImagens.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Trabalhos/CTeSP/2º Ano/PO/Exemplos/Aula 4" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -53,5 +58,16 @@
       <updated>1608749752099</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

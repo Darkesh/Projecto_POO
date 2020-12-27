@@ -18,7 +18,7 @@ public class ManipuladorDeImagens {
         //2: [2, 0][2, 1][2, 2][2, 3]
         //3: [3, 0][3, 1][3, 2][3, 3]
 
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        //System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
         for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar - escala; xQuadradoFora+=escala) {
             for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar - escala; yQuadradoFora+=escala) {
