@@ -41,5 +41,12 @@ public class Main {
         album.imagemSeguinte();
         System.out.println("-------------------------------------------------");
         album.imagemExibicao();
+        System.out.println("-------------------------------------------------");
+        album.imagemAnterior();
+        album.imagemExibicao();
+        System.out.println("-------------------------------------------------");
+        album.aumentarImagemExibicao();
+        System.out.println("-------------------------------------------------");
+        album.pixelizarImagemExibicao();
     }
 }

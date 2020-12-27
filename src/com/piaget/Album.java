@@ -86,14 +86,26 @@ public class Album {
         ImagemACores altReduzida = ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
     }
 
-    public void ampliarImagemExibicao(){
+    public void aumentarImagemExibicao(){
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
+        mostrarDadosAnterior(imagemAtual);
         ManipuladorDeImagens.aumentaImagem(imagemAtual);
+        ImagemACores altAumentada = ManipuladorDeImagens.aumentaImagem(imagemAtual);
+        System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
+                + " > - [< " + altAumentada.obterLargura()
+                + " > x < " + altAumentada.obterAltura() + ">] (E) ||");
+        mostrarDadosSeguinte(imagemAtual);
     }
 
     public void pixelizarImagemExibicao(){
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
+        mostrarDadosAnterior(imagemAtual);
         ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
+        ImagemACores altPixelizada = ManipuladorDeImagens.aumentaImagem(imagemAtual);
+        System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
+                + " > - [< " + altPixelizada.obterLargura()
+                + " > x < " + altPixelizada.obterAltura() + ">] (E) ||");
+        mostrarDadosSeguinte(imagemAtual);
     }
 
     public int getE () {

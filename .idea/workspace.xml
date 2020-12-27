@@ -5,10 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/bugsbunny_pixel.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagens/bugsbunny_pixel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/bugsbunny_reduz.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagens/bugsbunny_reduz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/jerry_aumenta.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagens/jerry_aumenta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/piaget/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/piaget/ImagemComEtiqueta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/ImagemComEtiqueta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/piaget/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/piaget/ManipuladorDeImagens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/piaget/ManipuladorDeImagens.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
