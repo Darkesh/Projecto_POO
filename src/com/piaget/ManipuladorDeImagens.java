@@ -68,16 +68,16 @@ public class ManipuladorDeImagens {
 
         ImagemACores imagemMaior = new ImagemACores(larguraDaImagemAAlterar*3, alturaDaImagemAAlterar*3);
 
-        for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar; xQuadradoFora+=3) {
-            for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar; yQuadradoFora+=3) {
+        for(int xQuadradoDentro = 1; xQuadradoDentro < larguraDaImagemAAlterar - 1; xQuadradoDentro += 1) {
+            for(int yQuadradoDentro = 1; yQuadradoDentro < alturaDaImagemAAlterar - 1; yQuadradoDentro += 1) {
 
                 int acumulaR = 0;
                 int acumulaG = 0;
                 int acumulaB = 0;
 
-                for(int xQuadradoDentro = xQuadradoFora; xQuadradoDentro < xQuadradoFora+3; xQuadradoDentro++) {
-                    for(int yQuadradoDentro = yQuadradoFora; yQuadradoDentro < yQuadradoFora+3; yQuadradoDentro++) {
-                        Cor corDoPixel = imagemAAumentar.obterCor(xQuadradoDentro, yQuadradoDentro);
+                for(int xQuadradoFora = xQuadradoDentro - 1; xQuadradoFora <= xQuadradoDentro + 1; xQuadradoFora++) {
+                    for(int yQuadradoFora = yQuadradoDentro - 1; yQuadradoFora <= yQuadradoDentro + 1; yQuadradoFora++) {
+                        Cor corDoPixel = imagemAAumentar.obterCor(xQuadradoFora, yQuadradoFora);
 
                         int r = corDoPixel.obterR();
                         int g = corDoPixel.obterG();
@@ -87,13 +87,19 @@ public class ManipuladorDeImagens {
                         acumulaG += g;
                         acumulaB += b;
 
-                        int mediaR = acumulaR / ((int)Math.pow(3, 2));
-                        int mediaG = acumulaG / ((int)Math.pow(3, 2));
-                        int mediaB = acumulaB / ((int)Math.pow(3, 2));
+                    }
+                }
 
-                        Cor corNova = new Cor(mediaR, mediaG, mediaB);
+                int mediaR = acumulaR / ((int)Math.pow(3, 2));
+                int mediaG = acumulaG / ((int)Math.pow(3, 2));
+                int mediaB = acumulaB / ((int)Math.pow(3, 2));
 
-                        imagemMaior.mudaCor(xQuadradoFora*3, yQuadradoFora*3, corNova);
+                Cor corNova = new Cor(mediaR, mediaG, mediaB);
+
+                for(int x = (xQuadradoDentro + (2 * xQuadradoDentro)); x <= (xQuadradoDentro + (2 * xQuadradoDentro) + 2); x++) {
+                    for (int y = (yQuadradoDentro + (2 * yQuadradoDentro)); y <= (yQuadradoDentro + (2 * yQuadradoDentro) + 2); y++) {
+
+                        imagemMaior.mudaCor(x, y, corNova);
                     }
                 }
             }
