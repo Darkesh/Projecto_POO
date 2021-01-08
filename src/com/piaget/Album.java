@@ -101,7 +101,7 @@ public class Album {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
         mostrarDadosAnterior(imagemAtual);
         ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
-        ImagemACores altPixelizada = ManipuladorDeImagens.aumentaImagem(imagemAtual);
+        ImagemACores altPixelizada = ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
         System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + altPixelizada.obterLargura()
                 + " > x < " + altPixelizada.obterAltura() + ">] (E) ||");
