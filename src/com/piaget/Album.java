@@ -22,7 +22,7 @@ public class Album {
                             + " > x < " + imagemAtual.getAlturaImagem() + ">] (E) ||");
     }
 
-    // Método para mostrar os dados da imagem anterior à em exibicao
+    // Método para mostrar os dados da imagem anterior à em exibição
     public void mostrarDadosAnterior(ImagemComEtiqueta imagemComEtiqueta) {
         if(E > 0) {
             ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E-1);
@@ -36,7 +36,7 @@ public class Album {
         }
     }
 
-    // Método para mostrar os dados da imagem seguinte à em exibicao
+    // Método para mostrar os dados da imagem seguinte à em exibição
     public void mostrarDadosSeguinte(ImagemComEtiqueta imagemComEtiqueta) {
         if(E < asMinhasImagens.size() - 1) {
             ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E+1);
@@ -55,7 +55,7 @@ public class Album {
         asMinhasImagens.add(imagemAAdicionar);
     }
 
-    // Método para mostrar os dados da imagem em exibicao, da imagem anterior e da imagem seguinte
+    // Método para mostrar os dados da imagem em exibição, da imagem anterior e da imagem seguinte
     public void imagemExibicao() {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
         mostrarDadosAnterior(imagemAtual);
