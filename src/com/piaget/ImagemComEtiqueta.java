@@ -18,24 +18,22 @@ public class ImagemComEtiqueta extends ImagemACores {
         return ficheiro;
     }
 
-   // public void mostrarDados(ImagemComEtiqueta imagemComEtiqueta){
-   //     System.out.println("nome: " + nomeImagem);
-   //     System.out.println("largura: " + alturaImagem + " altura: " + larguraImagem);
-   //     System.out.println("caminho: " + ficheiro);
-   // }
-
+    // Método para obter o nome de uma imagem
     public String obterNomeImagem() {
         return nomeImagem;
     }
 
+    // Método para mudar o nome de uma imagem
     public void mudarNomeImagem(String nomeImagem) {
         this.nomeImagem = nomeImagem;
     }
 
+    // Método para obter a altura de uma imagem
     public int getAlturaImagem() {
         return obterAltura();
     }
 
+    // Método para obter a largura de uma imagem
     public int getLarguraImagem() {
         return obterLargura();
     }

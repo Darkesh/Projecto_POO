@@ -4,6 +4,7 @@ public class ManipuladorDeImagens {
 
     ImagemACores imagem = new ImagemACores(20, 20);
 
+    // Método para reduzir uma imagem
     public static ImagemACores reduzImagem(ImagemACores imagemAAlterar, int escala) {
 
         int larguraDaImagemAAlterar = imagemAAlterar.obterLargura();
@@ -17,8 +18,6 @@ public class ManipuladorDeImagens {
         //1: [1, 0][1, 1][1, 2][1, 3]
         //2: [2, 0][2, 1][2, 2][2, 3]
         //3: [3, 0][3, 1][3, 2][3, 3]
-
-        //System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
         for(int xQuadradoFora = 0; xQuadradoFora < larguraDaImagemAAlterar - escala; xQuadradoFora+=escala) {
             for(int yQuadradoFora = 0; yQuadradoFora < alturaDaImagemAAlterar - escala; yQuadradoFora+=escala) {
@@ -56,6 +55,7 @@ public class ManipuladorDeImagens {
         return imagemNova;
     }
 
+    // Método para aumentar uma imagem
     public static ImagemACores aumentaImagem(ImagemACores imagemAAumentar) {
 
         int larguraDaImagemAAlterar = imagemAAumentar.obterLargura();
@@ -105,6 +105,7 @@ public class ManipuladorDeImagens {
         return imagemMaior;
     }
 
+    // Método para pixelizar uma imagem
     public static ImagemACores pixelizaImagem(ImagemACores imagemAPixelizar, int escala) {
         int largura = imagemAPixelizar.obterLargura();
         int altura = imagemAPixelizar.obterAltura();

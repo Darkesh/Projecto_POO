@@ -27,7 +27,9 @@ class ImagemACores {
         return dados.length;
     }
 
-    int[][] obterDados() { return dados; }
+    int[][] obterDados() {
+        return dados;
+    }
 
     void mudaCor(int x, int y, Cor c) {
         dados[y][x] = ImageUtil.encodeRgb(c.obterR(), c.obterG(), c.obterB());
