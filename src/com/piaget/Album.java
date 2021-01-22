@@ -19,7 +19,7 @@ public class Album {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
         System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + imagemAtual.getLarguraImagem()
-                + " > x < " + imagemAtual.getAlturaImagem() + ">] (E) ||");
+                + " > x < " + imagemAtual.getAlturaImagem() + " >] (E) ||");
     }
 
     // Método para mostrar os dados da imagem anterior à em exibição
@@ -30,7 +30,7 @@ public class Album {
             ImagemACores altReduzida = ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
             System.out.print("|| < " + (E) + " >: < " + imagemAtual.obterNomeImagem()
                     + " > - [< " + altReduzida.obterLargura()
-                    + " > x < " + altReduzida.obterAltura() + ">] ");
+                    + " > x < " + altReduzida.obterAltura() + " >] ");
         } else {
             System.out.println(" Não existem imagens anteriores!");
         }
@@ -44,7 +44,7 @@ public class Album {
             ImagemACores altReduzida = ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
             System.out.println(" < " + (E + 2) + " >: < " + imagemAtual.obterNomeImagem()
                     + " > - [< " + altReduzida.obterLargura()
-                    + " > x < " + altReduzida.obterAltura() + ">] ||");
+                    + " > x < " + altReduzida.obterAltura() + " >] ||");
         } else {
             System.out.println(" Não existem imagens seguintes!");
         }
@@ -61,6 +61,18 @@ public class Album {
         mostrarDadosAnterior(imagemAtual);
         mostrarDados(imagemAtual);
         mostrarDadosSeguinte(imagemAtual);
+    }
+
+    // Método para mostrar o conteúdo do album
+    public void mostrarAlbum() {
+        ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
+        System.out.println("Galeria do Album:");
+        for (ImagemComEtiqueta img : asMinhasImagens) {
+            System.out.print("|| < " + (asMinhasImagens.indexOf(img) + 1) + " >: < " + img.obterNomeImagem()
+                    + " > - [< " + img.obterLargura()
+                    + " > x < " + img.obterAltura() + " >] ");
+        }
+        System.out.println("");
     }
 
     // Método para mudar a imagem em exibição para a imagem seguinte
@@ -103,7 +115,7 @@ public class Album {
         ImagemACores altAumentada = ManipuladorDeImagens.aumentaImagem(imagemAtual);
         System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + altAumentada.obterLargura()
-                + " > x < " + altAumentada.obterAltura() + ">] (E) ||");
+                + " > x < " + altAumentada.obterAltura() + " >] (E) ||");
         mostrarDadosSeguinte(imagemAtual);
     }
 
@@ -115,7 +127,7 @@ public class Album {
         ImagemACores altPixelizada = ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
         System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + altPixelizada.obterLargura()
-                + " > x < " + altPixelizada.obterAltura() + ">] (E) ||");
+                + " > x < " + altPixelizada.obterAltura() + " >] (E) ||");
         mostrarDadosSeguinte(imagemAtual);
     }
 

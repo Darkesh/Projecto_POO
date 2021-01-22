@@ -24,6 +24,7 @@ public class Main {
         ImagemComEtiqueta imagemEtiqueta = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry.png", "rato");
         ImagemComEtiqueta imagemEtiqueta2 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerrypng.png", "gato e rato");
         ImagemComEtiqueta imagemEtiqueta3 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny.png", "coelho");
+        ImagemComEtiqueta imagemEtiqueta4 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerry_aumenta.png", "gato e rato aumentado");
 
         Album album = new Album();
 
@@ -32,20 +33,24 @@ public class Main {
         album.adicionaImagem(imagemEtiqueta2);
         //album.mostrarDados(imagemEtiqueta2);
         album.adicionaImagem(imagemEtiqueta3);
+        album.adicionaImagem(imagemEtiqueta4);
         //album.pixelizarImagemExibicao();
         album.imagemExibicao();
         album.imagemSeguinte();
-        System.out.println("-------------------------------------------------");
+        System.out.println("**************************************************************************************************");
         album.imagemExibicao();
         album.imagemSeguinte();
-        System.out.println("-------------------------------------------------");
+        System.out.println("**************************************************************************************************");
         album.imagemExibicao();
-        System.out.println("-------------------------------------------------");
+        System.out.println("**************************************************************************************************");
         album.imagemAnterior();
         album.imagemExibicao();
-        System.out.println("-------------------------------------------------");
+        System.out.println("**************************************************************************************************");
         album.aumentarImagemExibicao();
-        System.out.println("-------------------------------------------------");
+        System.out.println("**************************************************************************************************");
         album.pixelizarImagemExibicao();
+        System.out.println("**************************************************************************************************");
+        album.mostrarAlbum();
+        System.out.println("**************************************************************************************************");
     }
 }
