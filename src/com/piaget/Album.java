@@ -32,7 +32,7 @@ public class Album {
                     + " > - [< " + altReduzida.obterLargura()
                     + " > x < " + altReduzida.obterAltura() + " >] ");
         } else {
-            System.out.println(" Não existem imagens anteriores!");
+            System.out.print("|| < Não existem imagens anteriores! > ");
         }
     }
 
@@ -46,7 +46,7 @@ public class Album {
                     + " > - [< " + altReduzida.obterLargura()
                     + " > x < " + altReduzida.obterAltura() + " >] ||");
         } else {
-            System.out.println(" Não existem imagens seguintes!");
+            System.out.println(" < Não existem imagens seguintes! > ||");
         }
     }
 
