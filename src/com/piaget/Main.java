@@ -17,13 +17,13 @@ public class Main {
         //ImagemACores bugsBunnyPixel = ManipuladorDeImagens.pixelizaImagem(bugsBunny, 3);
         //ImagemACores tomEJerryPixel = ManipuladorDeImagens.pixelizaImagem(tomEJerry, 2);
         //ImagemACores JerryAumentado = ManipuladorDeImagens.aumentaImagem(Jerry);
+        //ImagemACores bugsBunnyReduzido = ManipuladorDeImagens.pixelizaImagem(tomEJerry, 2);
 
         // ImagemComEtiqueta testes
 
         ImagemComEtiqueta imagemEtiqueta = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\jerry.png", "rato");
         ImagemComEtiqueta imagemEtiqueta2 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\tomjerrypng.png", "gato e rato");
         ImagemComEtiqueta imagemEtiqueta3 = new ImagemComEtiqueta("C:\\Users\\Joao Espada\\Documents\\GitHub\\Projecto_POO\\imagens\\bugsbunny.png", "coelho");
-        //imagemEtiqueta.mostrarDados(imagemEtiqueta);
 
         Album album = new Album();
 

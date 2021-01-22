@@ -10,42 +10,42 @@ public class Album {
 
     private int E = 0;
 
-    public List<ImagemComEtiqueta> getImagens(){
+    public List<ImagemComEtiqueta> getImagens() {
         return asMinhasImagens;
     }
 
     // Método para mostrar os dados de uma imagem
-    public void mostrarDados(ImagemComEtiqueta imagemComEtiqueta){
+    public void mostrarDados(ImagemComEtiqueta imagemComEtiqueta) {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
-        System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
-                            + " > - [< " + imagemAtual.getLarguraImagem()
-                            + " > x < " + imagemAtual.getAlturaImagem() + ">] (E) ||");
+        System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
+                + " > - [< " + imagemAtual.getLarguraImagem()
+                + " > x < " + imagemAtual.getAlturaImagem() + ">] (E) ||");
     }
 
     // Método para mostrar os dados da imagem anterior à em exibição
     public void mostrarDadosAnterior(ImagemComEtiqueta imagemComEtiqueta) {
-        if(E > 0) {
-            ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E-1);
+        if (E > 0) {
+            ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E - 1);
             ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
             ImagemACores altReduzida = ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
             System.out.print("|| < " + (E) + " >: < " + imagemAtual.obterNomeImagem()
-                                + " > - [< " + altReduzida.obterLargura()
-                                + " > x < " + altReduzida.obterAltura() + ">] ");
-        }else {
+                    + " > - [< " + altReduzida.obterLargura()
+                    + " > x < " + altReduzida.obterAltura() + ">] ");
+        } else {
             System.out.println(" Não existem imagens anteriores!");
         }
     }
 
     // Método para mostrar os dados da imagem seguinte à em exibição
     public void mostrarDadosSeguinte(ImagemComEtiqueta imagemComEtiqueta) {
-        if(E < asMinhasImagens.size() - 1) {
-            ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E+1);
+        if (E < asMinhasImagens.size() - 1) {
+            ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E + 1);
             ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
             ImagemACores altReduzida = ManipuladorDeImagens.reduzImagem(imagemAtual, 2);
-            System.out.println(" < " + (E+2) + " >: < " + imagemAtual.obterNomeImagem()
-                                + " > - [< " + altReduzida.obterLargura()
-                                + " > x < " + altReduzida.obterAltura() + ">] ||");
-        }else {
+            System.out.println(" < " + (E + 2) + " >: < " + imagemAtual.obterNomeImagem()
+                    + " > - [< " + altReduzida.obterLargura()
+                    + " > x < " + altReduzida.obterAltura() + ">] ||");
+        } else {
             System.out.println(" Não existem imagens seguintes!");
         }
     }
@@ -65,18 +65,18 @@ public class Album {
 
     // Método para mudar a imagem em exibição para a imagem seguinte
     public void imagemSeguinte() {
-        if(E == asMinhasImagens.size()){
+        if (E == asMinhasImagens.size()) {
             System.out.println("Está na última imagem!");
-        }else {
+        } else {
             E++;
         }
     }
 
     // Método para mudar a imagem em exibição para a imagem anterior
     public void imagemAnterior() {
-        if(E == 0){
+        if (E == 0) {
             System.out.println("Está na primeira imagem!");
-        }else {
+        } else {
             E--;
         }
     }
@@ -96,30 +96,30 @@ public class Album {
     }
 
     // Método para aumentar a imagem em exibição
-    public void aumentarImagemExibicao(){
+    public void aumentarImagemExibicao() {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
         mostrarDadosAnterior(imagemAtual);
         ManipuladorDeImagens.aumentaImagem(imagemAtual);
         ImagemACores altAumentada = ManipuladorDeImagens.aumentaImagem(imagemAtual);
-        System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
+        System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + altAumentada.obterLargura()
                 + " > x < " + altAumentada.obterAltura() + ">] (E) ||");
         mostrarDadosSeguinte(imagemAtual);
     }
 
     // Método para pixelizar a imagem em exibição
-    public void pixelizarImagemExibicao(){
+    public void pixelizarImagemExibicao() {
         ImagemComEtiqueta imagemAtual = asMinhasImagens.get(E);
         mostrarDadosAnterior(imagemAtual);
         ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
         ImagemACores altPixelizada = ManipuladorDeImagens.pixelizaImagem(imagemAtual, 2);
-        System.out.print("|| < " + (E+1) + " >: < " + imagemAtual.obterNomeImagem()
+        System.out.print("|| < " + (E + 1) + " >: < " + imagemAtual.obterNomeImagem()
                 + " > - [< " + altPixelizada.obterLargura()
                 + " > x < " + altPixelizada.obterAltura() + ">] (E) ||");
         mostrarDadosSeguinte(imagemAtual);
     }
 
-    public int getE () {
+    public int getE() {
         return E;
     }
 

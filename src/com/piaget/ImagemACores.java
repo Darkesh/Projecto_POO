@@ -11,11 +11,11 @@ class ImagemACores {
 
     private int[][] dados; // @aImagemACores
 
-    ImagemACores (String ficheiro) {
+    ImagemACores(String ficheiro) {
         this.dados = ImageUtil.readColorImage(ficheiro);
     }
 
-    ImagemACores (int largura, int altura) {
+    ImagemACores(int largura, int altura) {
         dados = new int[altura][largura];
     }
 
